@@ -6,9 +6,9 @@ class Hat:
 
     def __init__(self, **kwargs):
         contents = []
-        for x,y in kwargs.items():
-            for i in range(y):
-                contents.append(x)            
+        for color,number in kwargs.items():
+            for i in range(number):
+                contents.append(color)            
 
     def draw(self, num_balls):
         #contents = [ list containing balls ]
