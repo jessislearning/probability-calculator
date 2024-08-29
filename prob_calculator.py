@@ -3,11 +3,15 @@ import random
 # Consider using the modules imported above.
 
 class Hat:
-    def __init__(self, *kwargs):
-        pass
+
+    def __init__(self, **kwargs):
+        contents = []
+        for x,y in kwargs.items():
+            for i in range(y):
+                contents.append(x)            
 
     def draw(self, num_balls):
-        #ball_box = [ list containing balls ]
+        #contents = [ list containing balls ]
         #drawn_list = []
         #for n in num_balls:
         #   random_ball = random.choice(ball_box)
