@@ -10,14 +10,11 @@ class Hat:
                 contents.append(color)            
 
     def draw(self, num_balls):
-        #contents = [ list containing balls ]
-        #drawn_list = []
-        #for n in num_balls:
-        #   random_ball = random.choice(ball_box)
-        #   ball_box.remove(random_ball)
-        #   drawn_list.append(random_ball)
-
-        pass
+        drawn_list = []
+        for n in range(num_balls):
+           random_ball = random.choice(self.contents)
+           self.contents.remove(random_ball)
+           drawn_list.append(random_ball)
 
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     pass
