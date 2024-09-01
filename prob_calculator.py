@@ -11,7 +11,9 @@ class Hat:
     def draw(self, num_balls):
         drawn_list = []
         if num_balls > len(self.contents):
-            return self.contents
+            drawn_list = copy.copy(self.contents)
+            self.contents.clear()
+            return drawn_list
         
         for n in range(num_balls):
            random_ball = random.choice(self.contents)
